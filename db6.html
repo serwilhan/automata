@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>SERWIL HAN | PERSONAL WEB</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.page.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="icn.png">
+
+</head>
+
+<body>
+
+    <!-- Header
+    ================================================== -->
+    <header id="home">
+
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a class="smoothscroll" href="index.html" target="_blank">Home</a></li>
+            </ul> <!-- end #nav -->
+
+        </nav> <!-- end #nav-wrap -->
+
+        <div class="row banner">
+            <div class="banner-text">
+                <h1 class="responsive-headline">DATABASE DESIGN</h1>
+            </div>
+        </div>
+
+
+
+    </header> <!-- Header End -->
+
+    <!-- ISI MATERI  -->
+
+    <!-- Post Content -->
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+
+        <!-- Post Content -->
+        <div class="post-content mt-0">
+            <H1 class="post-title mb-2">DATABASE DESIGN</H1>
+
+            <div class="d-flex justify-content-between mb-30">
+                <div class="post-meta d-flex align-items-center">
+                    <a href="#" class="post-author">By Serwil Han Yon Pirade</a>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                    <a href="#" class="post-date">D121181517</a>
+                </div>
+            </div>
+        </div>
+
+        <h3>A. Pengertian Desain Database</h3>
+            <p>Desain Basis Data adalah kumpulan proses yang memfasilitasi perancangan, pengembangan, implementasi, dan pemeliharaan sistem manajemen data perusahaan. Basis data yang dirancang dengan benar mudah dipelihara, meningkatkan konsistensi data, dan hemat biaya dalam hal ruang penyimpanan disk. Desainer database memutuskan bagaimana elemen data berkorelasi dan data apa yang harus disimpan.
+            
+            <h3>B. Tujuan</h3>
+            <p>Tujuan utama perancangan basis data adalah untuk menghasilkan model desain logis dan fisik dari sistem basis data yang diusulkan. Model logis berkonsentrasi pada persyaratan data dan data yang akan disimpan terlepas dari pertimbangan fisik. Itu tidak peduli dengan bagaimana data akan disimpan atau di mana akan disimpan secara fisik. Model desain data fisik melibatkan penerjemahan desain logis dari database ke media fisik menggunakan sumber daya perangkat keras dan sistem perangkat lunak seperti sistem manajemen basis data (DBMS).
+            
+            <h3>C. Database Design Proccess</h3>
+            <img src="images/db6/db6.png" alt="">
+            <p>
+                Secara khusus proses desain berisikan 2 aktifitas paralel. Aktifitas yang pertama melibatkan desain dari isi data dan struktur database, sedangkan aktifitas kedua mengenai desain pemrosesan database dan aplikasi-aplikasi perangkat lunak. Kedua aktifitas ini saling menjalin dan saling mempengaruhi satu sama lain.
+            </p>
+            6 tahap proses desain database:
+            <br>
+            1. Pengumpulan dan Analisis Kebutuhan Data
+            <br>
+            2. Desain Database Konseptual
+            <br>
+            3. Pemilihan DBMS
+            <br>
+            4. Desain Database Secara Logika (Pemetaan Model Data)
+            <br>
+            5. Desain Database Secara Fisik
+            <br>
+            6. Implementasi Database
+
+            <h3>D. Pengumpulan data dan analisa</h3>
+            <p>Merupakan suatu tahap dimana kita melakukan proses indentifikasi dan analisa kebutuhan-kebutuhan data dan ini disebut pengumpulan data dan analisa. Untuk menentukan kebutuhan-kebutuhan suatu sistem database, kita harus mengenal terlebih dahulu bagian-bagian lain dari sistem informasi yang akan berinteraksi dengan sistem database, termasuk para user yang ada dan para user yang baru beserta aplikasi-aplikasinya. Kebutuhan-kebutuhan dari para user dan aplikasi-aplikasi inilah yang kemudian dikumpulkan dan dianalisa.</p>
+            
+            <h3>E. Perancangan database secara konseptual</h3>
+            <p>Pada tahap ini akan dihasilkan conceptual schema untuk database yang tergantung pada sebuah DBMS yang spesifik. Sering menggunakan sebuah high-level data model seperti ER/EER modelselama tahap ini. Dalam conceptual schema, kita harus merinci aplikasi-aplikasi database yang diketahui dan transaksi-transaksi yang mungkin.Tahap perancangan database secara konseptual mempunyai 2 aktifitas pararel:
+            </p>
+
+            <strong>Perancangan skema konseptual</strong>
+            <p>Menguji kebutuhan-kebutuhan data dari suatu database yang merupakan hasil dari tahap 1 dan menghasilkan sebuah conceptual database schema pada DBMS-independent model data tingkat tinggi seperti EER (Enhanced Entity Relationship) model. Untuk menghasilkan skema tersebut dapat dihasilkan dengan penggabungan bermacam-macam kebutuhan user dan secara langsung membuat skema database atau dengan merancang skema-skema yang terpisah dari kebutuhan tiap-tiap user dan kemudian menggabungkan skema-skema tersebut. Model data yang digunakan pada perancangan skema konseptual adalah DBMS-independent dan langkah selanjutnya adalah memilih DBMS untuk melakukan rancangan tersebut.</p>
+            <strong>Perancangan transaksi</strong>
+            <p>Menguji aplikasi-aplikasi databasedimana kebutuhan-kebutuhannya telah dianalisa pada fase 1, dan menghasilkan perincian transaksi-transaksi ini.Kegunaan tahap ini yang diproses secara paralel bersama tahapp perancangan skema konseptual adalah untuk merancang karakteristik dari transaksi-transaksi database yang telah diketahui pada suatu DBMS-independent. Transaksi-transaksi ini akan digunakan untuk memproses dan memanipulasi database suatu saat dimana database tersebut dilaksanakan.
+            </p>
+
+            <h3>E. Pemilihan DBMS</h3>
+            <p>Pemilihan database ditentukan oleh beberapa faktor diantaranya faktor teknik, ekonomi, dan politik organisasi.Contoh faktor teknik: Keberadaan DBMS dalam menjalankan tugasnya seperti jenis-jenis DBMS (relational, network, hierarchical, dan lain-lain), struktur penyimpanan, dan jalur akses yang mendukung DBMS, pemakai, dan lain-lain.
+
+                Teori memberikan konsep dan prinsip yang menolong untuk memahami perilaku dari suatu persoalan yang berkorelasi dengan teori tersebut. Bidang ilmu komputer meliputi topik yang luas, dari perancangan mesin sampai pemrograman. Disamping perbedaan yang ada, terdapat keseragaman prinsip-prinsip umum yang dipakai. ​Untuk mempelajari prinsip-prinsip dasar tersebut, kita mengkonstruksi suatu mesin otomata sebagai model abstrak dari komputer dan komputasi.
+                
+                Model ini memiliki fungsi-fungsi yang penting dan umum pada perangkat keras dan perangkat lunak komputer. Meskipun model tersebut sederhana untuk diterapkan langsung pada dunia nyata, keuntungan yang diperoleh dari mempelajarinya adalah memberikan landasan untuk basis dari suatu pengembangan algoritma. Beberapa gagasan yang diutarakan memiliki penerapan yang penting, misalkan pada compiler
+            </p>
+            
+            <h3>F. Perancangan database secara logika (data model mapping)</h3>
+            <p>Tahap selanjutnya adalah membuat sebuah skema konseptual dan skema eksternal pada model data dari DBMS yang terpilih. Tahap ini dilakukan oleh pemetaan skema konseptual dan skema eksternal yang dihasilkan pada tahap 2. Pada tahap ini, skema konseptual ditransformasikan dari model data tingkat tinggi yang digunakan pada tahap 2 ke dalam model data dari model data dari DBMS yang dipilih pada tahap 3
+            </p>
+
+            <p> Pemetaan tersebut dapat diproses dalam 2 tingkat: </p>
+        
+            <strong>1. Pemetaan system-independent</strong>
+            <br>
+            Pemetaan ke dalam model data DBMS dengan tidak mempertimbangkan karakteristik atau hal-hal yang khusus yang berlaku pada implementasi DBMS dari model data tersebut.
+            <br>
+            <br>
+            <strong>2. Penyesuain skema ke DBMS yang spesifik</strong>
+            <br>
+            Mengatur skema yang dihasilkan pada langkah 1 untuk disesuaikan pada implementasi yang khusus di masa yang akan datang dari suatu model data yang digunakan pada DBMS yang dipilih.Hasil dari tahap ini memakai perintah-perintah DDL (Data Definition Language) dalam bahasa DBMS yang dipilih yang menentukan tingkat skema konseptual dan eksternal dari sistem database.
+
+    </div>
+
+    <section id="about">
+
+        <div class="row">
+
+            <div class="three columns">
+
+                <img class="profile-pic" src="images/profilepic.jpg" alt="" />
+
+            </div>
+
+            <div class="nine columns main-col">
+
+                <h2>About Me</h2>
+
+                <p>My name is Serwil Han Yon Pirade and I’m just starting third year of my computer science studies at
+                    Hasanuddin
+                    University in Gowa, Indonesia.
+                </p>
+
+                <div class="row">
+
+                    <div class="columns contact-details">
+
+                        <h2>Contact Details</h2>
+                        <p class="address">
+                            <span>Serwil Han Yon Pirade</span><br>
+                            <span>D121181517</span><br>
+                            <span>Jl. Malino, Borongloe, Bontomarannu, Gowa, <br>
+                                Sulawesi Selatan, 92119 IND
+                            </span><br>
+                            <span>ewinpirade@gmail.com</span>
+                        </p>
+
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div> <!-- end .main-col -->
+
+        </div>
+
+    </section> <!-- About Section End-->
+</body>
+
+</html>

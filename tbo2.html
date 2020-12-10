@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>SERWIL HAN | PERSONAL WEB</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.page.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="icn.png">
+
+</head>
+
+<body>
+
+    <!-- Header
+    ================================================== -->
+    <header id="home">
+
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a class="smoothscroll" href="index.html" target="_blank">Home</a></li>
+            </ul> <!-- end #nav -->
+
+        </nav> <!-- end #nav-wrap -->
+
+        <div class="row banner">
+            <div class="banner-text">
+                <h1 class="responsive-headline">NOTASI BIG O</h1>
+            </div>
+        </div>
+
+
+
+    </header> <!-- Header End -->
+
+    <!-- ISI MATERI  -->
+
+    <!-- Post Content -->
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+
+        <!-- Post Content -->
+        <div class="post-content mt-0">
+            <H1 class="post-title mb-2">NOTASI BIG O</H1>
+
+            <div class="d-flex justify-content-between mb-30">
+                <div class="post-meta d-flex align-items-center">
+                    <a href="#" class="post-author">By Serwil Han Yon Pirade</a>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                    <a href="#" class="post-date">D121181517</a>
+                </div>
+            </div>
+        </div>
+
+        <h3>DEFINISI NOTASI BIG O</h3>
+        <p>Notasi O besar atau yang lazim disebut dengan Big-O Notation adalah sebuah cara atau metode untuk melakukan analisa
+        terhadap sebuah algoritma pemrograman terhadap waktu eksekusi. Tentang seberapa efisien dan kompleksitas barisan kode
+        dalam dimensi waktu.
+        <br>
+        <br>
+        Di dalam sebuah program komputer pada umumnya, kita sudah lazim dengan istilah masukan-proses-keluaran.
+        <img src="images/tbo2/01.png" alt="">
+        </p>
+
+        <p><strong>Notasi O besar</strong> merupakan skenario terburuk dari sebuah algoritma, dan biasanya terdapat notasi n yang merepresentasikan
+        jumlah masukan. Berikut adalah diagram notasi O besar dengan masukan yang dimulai dari 0 hingga tak terhingga.
+        </p>
+        <img src="images/tbo2/02.png" alt="">
+        <br>
+        <br>
+        <p>Dari diagram diatas dapat kita lihat beberapa notasi yang kerap muncul, yaitu: O(1), O(log n), O(n), O(n2) atau O(nn).
+        Untuk membahasnya, mari kita berandai-andai membangun sebuah aplikasi travel. Dan kita diminta untuk membuat fitur baru
+        yang menampilkan daftar kisaran harga dari hotel-hotel yang berada di area tertentu.
+        </p>
+
+        <img src="images/tbo2/03.png" alt="">
+        <br>
+        <br>
+        <p>Untuk membuat fitur tersebut, sederhananya kita mencari harga terendah (min) dan harga tertinggi (max) dari daftar
+        hotel. Tentunya semakin banyak datanya, akan semakin lama pula proses untuk mencari harga terendah dan tertinggi.</p>
+        
+        <h3>KEGUNAAN</h3>
+        <p>
+            Big O Notation digunakan untuk mengukur tingkat kompleksitas suatu algoritma. Terdapat dua macam penggunaan notasi ini:
+            <br>
+            <h4>Infinite Asymphotic (Asimpotik Tak Hingga)</h4>
+            Notasi O Besar sangat berguna untuk mengnalisa efisiensi suatu algoritma. Misalnya, waktu yang diperlukan untuk
+            menyelesaikan sebuah masalah dengan parameter n bisa jadi T(n) = 4n2 – 2n + 2. Semakin n bertambah besar, suku n2 akan
+            mendominasi pertumbuhan, sehingga suku-suku yang lain dapat diabaikan – sebagai perumpamaan, jika n = 500, suku 4n2 akan
+            1000 kali lebih besar daripada suku 2n, sehingga mengabaikan suku-suku yang lebih kecil tidak akan memberikan efek yang
+            cukup signifikan. Lebih jauh lagi, koefisien dari suku tersebut menjadi tidak relevan / dapat diabaikan. Misalnya
+            ekspresi yang mengandung suku n2 atau 2n. Meskipun T(n) = 1.000.000n2, jika U(n) = nx, koefisien selalu dapat diabaikan,
+            karena n berkembang lebih besar dari 1.000.000.
+            <br>
+            <br>
+            <h4>Infinitesimal Asymphotic (Asimpotik Sangat Kecil)</h4>
+            Notasi O Besar dapat pula digunakan untuk menggambarkan kesalahan dalam sebuah aproksimasi dalam fungsi matematika.
+            Seperti misalnya : Mengekspresikan bahwa kesalahannya, memiliki selisih dan lebih kecil dalam nilai absolut dibandingkan
+            waktu konstan |n|3 untuk x mendekati 0. Dalam analisa asimptotik, kita lebih mementingkan kecenderungan ukuran (order of
+            magnitude) daripada nilai aktual/sebenarnya dari sebuah fungsi. Dan lagi, kita tidak perlu mengetahui berapa lama waktu
+            yang dibutuhkan untuk melakukan suatu operasi pada jenis komputer tertentu. Yang jelas, kita dengan mudah dapat melihat
+            bahwa “n2“ adalah fungsi yang berkembang jauh lebih cepat dibandingkan fungsi linear seperi “n”. Untuk menggambarkan
+            kecenderungan ukuran dari suatu operasi, kita menggunakan “Notasi O Besar”. Jika kita memiliki algoritma yang melakukan
+            7n4 + 35n3 – 19n2 + 3 operasi, Notasi O Besarnya adalah O(n4). Jika kita memiliki algoritma yang melakukan 2n + 5
+            operasi, Notasi O Besarnya adalah O(n). Perhitungan tersebut cukup sederhana.
+        </p>
+
+        <h3>CONTOH-CONTOH</h3>
+        <p>1. O(1) Konstan Menentukan apakah suatu bilangan ganjil atau genap
+        <br>
+        2. O(log * n) Iterasi logaritmik Algoritma pencarian Hopcraft dan Ullman untuk himpunan disjoint
+        <br>
+        3. O(log n) Logaritmik Pencarian dalam list terurut dengan Binary Search Algorithm
+        <br>
+        4. O((log n)c) Polilogaritmik Menentukan bilangan prima dengan AKS primality test
+        <br>
+        5. O(n) Linear Pencarian dalam list tidak terurut
+        <br>
+        6. O(n log n) Linearitmik Mengurutkan list dengan Heapsort
+        <br>
+        7. O(n2) Kuadratik Mengurutkan list dengan Insertion Sort
+        <br>
+        8. O(nc), c > 1 Poliomial Pencarian shortest path dengan algoritma Floyd-Warshall
+        <br>
+        9. O(cn) Eksponensial Pencarian solusi untuk traveling salesman problem
+        <br>
+        10. O(n!) Faktorial Menyelesaikan traveling salesman problem dengan menggunakan brute force
+        <br>
+        11. O(2cn) Dobel Eksponensial Pencarian himpunan lengkap dari AC-unifiers (associative-commutative unifiers) Tidak biasa,
+        namun pertumbuhan yang jauh lebih cepat masih mungkin terjadi</p>
+
+        
+
+        </ul>
+    </div>
+
+    <section id="about">
+
+        <div class="row">
+
+            <div class="three columns">
+
+                <img class="profile-pic" src="images/profilepic.jpg" alt="" />
+
+            </div>
+
+            <div class="nine columns main-col">
+
+                <h2>About Me</h2>
+
+                <p>My name is Serwil Han Yon Pirade and I’m just starting third year of my computer science studies at
+                    Hasanuddin
+                    University in Gowa, Indonesia.
+                </p>
+
+                <div class="row">
+
+                    <div class="columns contact-details">
+
+                        <h2>Contact Details</h2>
+                        <p class="address">
+                            <span>Serwil Han Yon Pirade</span><br>
+                            <span>D121181517</span><br>
+                            <span>Jl. Malino, Borongloe, Bontomarannu, Gowa, <br>
+                                Sulawesi Selatan, 92119 IND
+                            </span><br>
+                            <span>ewinpirade@gmail.com</span>
+                        </p>
+
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div> <!-- end .main-col -->
+
+        </div>
+
+    </section> <!-- About Section End-->
+</body>
+
+</html>

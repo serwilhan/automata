@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>SERWIL HAN | PERSONAL WEB</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.page.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="icn.png">
+
+    <style>
+        #datanine img{
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header
+    ================================================== -->
+    <header id="home">
+
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a class="smoothscroll" href="index.html" target="_blank">Home</a></li>
+            </ul> <!-- end #nav -->
+
+        </nav> <!-- end #nav-wrap -->
+
+        <div class="row banner">
+            <div class="banner-text">
+                <h1 class="responsive-headline">DATABASE TRANSACTIONS</h1>
+            </div>
+        </div>
+
+
+
+    </header> <!-- Header End -->
+
+    <!-- ISI MATERI  -->
+
+    <!-- Post Content -->
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+
+        <!-- Post Content -->
+        <div class="post-content mt-0">
+            <H1 class="post-title mb-2">DATABASE TRANSACTIONS</H1>
+
+            <div class="d-flex justify-content-between mb-30">
+                <div class="post-meta d-flex align-items-center">
+                    <a href="#" class="post-author">By Serwil Han Yon Pirade</a>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                    <a href="#" class="post-date">D121181517</a>
+                </div>
+            </div>
+        </div>
+
+            <h3>A. Pengertian Transaksi</h3>
+            <img id="datanine" src="images/db9/db9-3.png" alt="">
+            <P>
+                Transaksi adalah unit eksekusi program yang mengakses dan dapat memperbarui berbagai item data. 
+                Biasanya, transaksi dimulai oleh program pengguna yang ditulis dalam bahasa manipulasi data tingkat 
+                tinggi (biasanya SQL), atau bahasa pemrograman (misalnya, C ++ atau Java), dengan akses database yang 
+                disematkan di JDBC atau ODBC. Transaksi dibatasi oleh pernyataan (atau pemanggilan fungsi) dari 
+                form memulai transaksi dan mengakhiri transaksi (begin transaction and end transaction). Transaksi 
+                terdiri dari semua operasi yang dijalankan antara transaksi awal dan transaksi akhir.
+            </P>
+            <p>
+                Pada sistem pemrosesan transaksi biasanya memperbolehkan banyak transaksi yang di proses
+                secara bersamaan. Diperbolehkannya banyak transaksi di proses secara bersamaan, akan dapat
+                menimbulkan banyak hal yang dapat mempengaruhi konsistensi data pada basis data.
+                Pemrosesan transaksi secara bersamaan bisa dilakukan secara serial yaitu menyelesaikan satu
+                transaksi baru di ikuti dengan transaksi yang lain. Tetapi pemrosesan tersebut juga bisa
+                dilakukan dengan diperbolehkannya proses secara interleave untuk memaksimalkan kerja CPU
+                dan memperkecil waktu tunggu antar transaksi.
+            </p>
+            <p>
+                Sistem basis data harus dapat mengatur interaksi dari transaksi – transaksi yang di proses secara
+                bersamaan tersebut untuk dapat menjamin konsistensi dari basis data. Dimana untuk Transaksi
+                T1 dan T2 yang diproses secara bersamaan, kita tidak bisa menjamin bahwa T1 di proses terlebih
+                dahulu baru di ikuti dengan T2, sehingga diperlukan schedule yang akan mengatur urutan dari
+                sekumpulan aksi yang akan di proses.
+            </p>
+            <p>
+                Transaksi adalah suatu unit dari eksekusi program yang memungkinkan
+                untuk mengakses dan melakukan perubahan pada beberapa data item. Suatu
+                sistem basis data harus memastikan eksekuasi transaksi yang sesuai – apakah
+                keseluruhan transaksi dieksekusi atau tidak satupun operasi di dalamnya yang
+                dieksekusi. Lebih jelasnya, basis data harus mengelola eksekusi transaksi yang
+                terjadi secara berbarengan sehingga tidak terjadi ketidak konsistenan data pada
+                basis data. 
+            </p>
+            <p>
+                <strong>Transaction mengakses data menggunakan dua operasi, yaitu :</strong>
+                <ul>
+                    <li>a. read (x)</li>
+                    <p>
+                        Mentransfer data item X dari basis data ke local buffer yang
+                        merupakan bagian dari transaksi yang melakukan operasi read.
+                    </p>
+                    <li>b. write (x)</li>
+                    <p>
+                        Mentransfer data item X dari local buffer pada transaksi yang
+                        melakukan penulisan data kembali ke basis data. 
+                    </p>
+                </ul> 
+            </p>
+            
+            <h3>B. ACID Property</h3>
+                <div id="datanine"><img  src="images/db9/db9.png" alt=""></div>
+                <P>
+                    Terdapat empat sifat penting dalam transaksi yang harus dijamin oleh 
+                    DBMS dalam menjaga  <br> agar data tetap konsisten, yaitu : 
+                </P>
+                <p>
+                    <ol>
+                        <li>
+                           <strong> Atomicity.</strong> Baik semua operasi transaksi tercermin dengan benar di database, atau tidak ada sama sekali.
+                        </li>
+                        <li>
+                            <strong> Consistency.</strong> Eksekusi transaksi dalam isolasi (yaitu, tanpa transaksi lain yang dijalankan secara bersamaan) menjaga konsistensi database.
+                        </li>
+                        <li>
+                            <strong> Isolation.</strong> Meskipun beberapa transaksi dapat dieksekusi secara bersamaan, sistem menjamin bahwa, untuk setiap pasangan transaksi Ti dan Tj, tampaknya Tj menyelesaikan eksekusi sebelum Ti dimulai atau Tj memulai eksekusi setelah Ti selesai. Dengan demikian, setiap transaksi tidak mengetahui transaksi lain yang dijalankan secara bersamaan dalam sistem.
+                        </li>
+                        <li>
+                            <strong> Durability.</strong> Setelah transaksi berhasil diselesaikan, perubahan yang telah dibuat ke database tetap ada, bahkan jika ada kegagalan sistem.
+                        </li>
+                    </ol>
+                </p>
+            
+            <h3>C. Contoh Kasus 1</h3>
+            <p>Contoh, untuk proses transfer uang dari account A ke account B sebesar
+                Rp. 500 dengan Urutan aksi sebagai berikut : </p>
+            <img src="images/db9/db9-1.png" alt=""><br>
+            <img src="images/db9/db9-2.png" alt="">
+
+            <p>Dimana jika ditinjau dari ACID properties maka : </p>
+            <p>
+                Atomicity : <br> Jika transaksi gagal setelah langkah 3 dan sebelum langkah 6, maka
+                sistem harus memastikan tidak ada aksi yang mempengaruhi basis
+                data, jika tidak maka akan menyebabkan ke tidak konsistenan data
+                pada basis data.
+            </p>
+
+            <p>
+                Consistency : <br> Jumlah dari A dan B tidak berubah dengan dijalankannya proses
+                transaksi tersebut.
+            </p>
+            <p>
+                Isolation : <br> antara langkah 3-6, tidak boleh ada transaksi lain yang malakukan
+                peng-update-an pada sebagian data yang sedang diupdate pada
+                database, atau jika ada maka akan menghasilkan ke tidak
+                konsistenan (A + B akan kurang atau lebih dari yang seharusnya)
+            </p>
+            <p>
+                Durability : <br> Ketika user memberitahukan bahwa transaksi selesai, maka update
+                ke basis data oleh transaksi harus dilakukan meskipun ada
+                kegagalan. 
+            </p>
+
+            <h3>D. CONTOH KASUS 2</h3>
+            <p>Misal ada 2 transaksi transfer antara rek A, dan rek B yang terjadi secara bersamaan:</p>
+            <strong>T1 : Transfer A->B senilai 500</strong>
+            <ul>
+                <li>- Kurangi saldo A 500</li>
+                <li>- Tambah saldo B 500</li>
+            </ul>
+            <strong>T2 : Transfer B->A senilai 1000</strong>
+            <ul>
+                <li>- Kurangi saldo B 1000</li>
+                <li>- Tambah saldo A 1000</li>
+            </ul>
+            <br>
+            <p>Bayangkan jika transaksi tersebut terjadi secara bersamaan dan di proses tanpa isolasi sehingga akan menjadi:</p>
+            <ul>
+                <li>- Kurangi saldo A 500</li> 
+                <li>- Tambah saldo B 500</li>
+                <li>- Kurangi saldo B 1000</li>
+                <li>- Tambah saldo A 1000</li>
+            </ul>
+            
+            
+            
+    </div>
+
+    <section id="about">
+
+        <div class="row">
+
+            <div class="three columns">
+
+                <img class="profile-pic" src="images/profilepic.jpg" alt="" />
+
+            </div>
+
+            <div class="nine columns main-col">
+
+                <h2>About Me</h2>
+
+                <p>My name is Serwil Han Yon Pirade and I’m just starting third year of my computer science studies at
+                    Hasanuddin
+                    University in Gowa, Indonesia.
+                </p>
+
+                <div class="row">
+
+                    <div class="columns contact-details">
+
+                        <h2>Contact Details</h2>
+                        <p class="address">
+                            <span>Serwil Han Yon Pirade</span><br>
+                            <span>D121181517</span><br>
+                            <span>Jl. Malino, Borongloe, Bontomarannu, Gowa, <br>
+                                Sulawesi Selatan, 92119 IND
+                            </span><br>
+                            <span>ewinpirade@gmail.com</span>
+                        </p>
+
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div> <!-- end .main-col -->
+
+        </div>
+
+    </section> <!-- About Section End-->
+</body>
+
+</html>

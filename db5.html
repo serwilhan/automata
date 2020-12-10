@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>SERWIL HAN | PERSONAL WEB</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.page.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="icn.png">
+
+</head>
+
+<body>
+
+    <!-- Header
+    ================================================== -->
+    <header id="home">
+
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a class="smoothscroll" href="index.html" target="_blank">Home</a></li>
+            </ul> <!-- end #nav -->
+
+        </nav> <!-- end #nav-wrap -->
+
+        <div class="row banner">
+            <div class="banner-text">
+                <h1 class="responsive-headline">EVALUATION PLAN</h1>
+            </div>
+        </div>
+
+
+
+    </header> <!-- Header End -->
+
+    <!-- ISI MATERI  -->
+
+    <!-- Post Content -->
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+
+        <!-- Post Content -->
+        <div class="post-content mt-0">
+            <H1 class="post-title mb-2">EVALUATION PLAN</H1>
+
+            <div class="d-flex justify-content-between mb-30">
+                <div class="post-meta d-flex align-items-center">
+                    <a href="#" class="post-author">By Serwil Han Yon Pirade</a>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                    <a href="#" class="post-date">D121181517</a>
+                </div>
+            </div>
+        </div>
+
+        <h3>A. MySQL Evaluation Plan</h3>
+        <p>MySQL menggunakan sintaks explain query yang sama dengan PostgreSQL, tetapi hasilnya adalah tabel yang isinya tidak
+            mudah dipahami. Namun, menjalankan peringatan acara setelah perintah menjelaskan akan menampilkan rencana evaluasi
+            dalam format yang lebih dapat dibaca manusia
+            <br>
+            <br>
+            Tergantung detail tabel, kolom, indeks, dan kondisi di klausa WHERE, pengoptimal MySQL mempertimbangkan banyak
+            teknik untuk melakukan pencarian yang terlibat dalam query SQL secara efisien. Query pada tabel besar dapat
+            dilakukan tanpa membaca semua baris; gabungan yang melibatkan beberapa tabel dapat dilakukan tanpa membandingkan
+            setiap kombinasi baris. Rangkaian operasi yang dipilih pengoptimal untuk menjalankan query paling efisien disebut
+            "query execution plan", juga dikenal sebagai rencana EXPLAIN. Tujuan Anda adalah untuk mengenali aspek dari rencana
+            EXPLAIN yang menunjukkan bahwa query dioptimalkan dengan baik, dan untuk mempelajari sintaks SQL dan teknik
+            pengindeksan untuk meningkatkan rencana jika Anda melihat beberapa operasi yang tidak efisien.
+            <br>
+            <br>
+            Perintah EXPLAIN memberikan informasi tentang bagaimana MySQL menjalankan query. EXPLAIN dapat bekerja dengan
+            pernyataan SELECT, DELETE, INSERT, REPLACE, dan UPDATE. Pertama-tama akan menganalisis query asli, kemudian mencoba
+            mengoptimalkan query dan melihat ke dalam rencana eksekusi query yang dioptimalkan untuk melihat apa yang berubah
+            dan mengapa.
+            <br>
+            <br>
+            Menggunakan EXPLAIN sesederhana pra-pending sebelum query SELECT.
+            <br>
+            <img src="images/db5/1.jpg" alt="">
+
+            <h3>B. PostgreSQL Evaluation Plan</h3>
+            <p>Introduction to PostgreSQL EXPLAIN statement
+            <br>
+            Pernyataan EXPLAIN mengembalikan rencana eksekusi yang dibuat oleh perencana PostgreSQL untuk pernyataan yang diberikan.
+            EXPLAIN menunjukkan bagaimana tabel yang terlibat dalam pernyataan akan dipindai oleh pemindaian indeks atau pemindaian
+            sekuensial, dll., Dan jika beberapa tabel digunakan, jenis algoritma gabungan apa yang akan digunakan.
+            <br>
+            <br>
+            Informasi paling penting dan berguna yang dikembalikan pernyataan EXPLAIN adalah biaya awal sebelum baris pertama
+            dikembalikan dan biaya total untuk mengembalikan rangkaian hasil lengkap.
+            Berikut ini adalah sintaks dari pernyataan EXPLAIN:
+            <br><br>
+            EXPLAIN [ ( option [, ...] ) ] sql_statement;
+            <br><br>
+            di mana opsinya dapat berupa salah satu dari berikut ini:
+            <br>
+            <strong>ANALYZE [ boolean ]</strong>
+            <br>
+            <strong>VERBOSE [ boolean ]</strong>
+            <br>
+            <strong>COSTS [ boolean ]</strong>
+            <br>
+            <strong>BUFFERS [ boolean ]</strong>
+            <br>
+            <strong>TIMING [ boolean ]</strong>
+            <br>
+            <strong>SUMMARY [ boolean ]</strong>
+            <br>
+            <strong>FORMAT { TEXT | XML | JSON | YAML }</strong>
+            <br><br>
+            Boolean menentukan apakah opsi yang dipilih harus dihidupkan atau dimatikan. Anda dapat menggunakan TRUE, ON, atau 1
+            untuk mengaktifkan opsi, dan FALSE, OFF, atau 0 untuk menonaktifkannya. Jika Anda menghilangkan boolean, defaultnya
+            adalah ON.
+            
+            <h3>Explain Analyze</h3>
+            Opsi ANALYZE menyebabkan sql_statement dieksekusi terlebih dahulu dan kemudian statistik run-time aktual dalam informasi
+            yang dikembalikan termasuk total waktu berlalu yang dihabiskan dalam setiap node rencana dan jumlah baris yang
+            sebenarnya dikembalikan.
+            <br>
+            Pernyataan ANALYZE sebenarnya mengeksekusi pernyataan SQL dan membuang informasi keluaran, oleh karena itu, jika Anda
+            ingin menganalisis pernyataan apa pun seperti INSERT, UPDATE, atau DELETE tanpa mempengaruhi data, Anda harus membungkus
+            EXPLAIN ANALYZE dalam transaksi, sebagai berikut:
+            <br><br>
+            <strong>
+                BEGIN;<br>
+                EXPLAIN ANALYZE sql_statement;<br>
+                ROLLBACK <br>
+                VERBOSE <br>
+            </strong> 
+            <br>
+            Parameter VERBOSE memungkinkan Anda untuk menampilkan informasi tambahan mengenai rencana tersebut. Parameter ini
+            disetel ke FALSE secara default.
+         
+            <h5>COSTS</h5>
+            
+            Opsi COSTS mencakup perkiraan biaya awal dan total setiap node rencana, serta perkiraan jumlah baris dan perkiraan lebar
+            setiap baris dalam rencana kueri. Default COSTS ke TRUE.
+       
+            <h5>BUFFERS</h5>
+            
+            Parameter ini menambahkan informasi ke penggunaan buffer. BUFFERS hanya dapat digunakan saat ANALYZE diaktifkan. Secara
+            default, parameter BUFFERS disetel ke FALSE.
+            
+            <h5>TIMING</h5>
+            
+            Parameter ini mencakup waktu startup aktual dan waktu yang dihabiskan di setiap node dalam output. WAKTU default ke TRUE
+            dan ini hanya dapat digunakan ketika ANALYZE diaktifkan.
+      
+            <h5>SUMMARY</h5>
+            
+            Parameter SUMMARY menambahkan informasi ringkasan seperti waktu total setelah rencana kueri. Perhatikan bahwa ketika
+            opsi ANALYZE digunakan, informasi ringkasan disertakan secara default.
+            
+            <h5>FORMAT</h5>
+            
+            Tentukan format keluaran dari rencana kueri seperti TEXT, XML, JSON, dan YAML. Parameter ini disetel ke TEXT secara
+            default.
+            <br><br>
+            Contoh <strong>PostgreSQL EXPLAIN</strong> 
+            <br><br>
+            Pernyataan berikut menunjukkan rencana kueri sederhana pada tabel film:
+            <br>
+            <br>
+            EXPLAIN SELECT * FROM film;
+            
+            <br>
+            Outputnya adalah sebagai berikut :
+            ​<br>
+            <br>
+            <strong>
+            QUERY PLAN
+            <br>
+            Seq Scan on film (cost=0.00..64.00 rows=1000 width=384)</strong> 
+        </p>
+
+        <h3>C. SQL Server Evaluation Plan</h3>
+        <p>EVALUATION PLAN - SQL SERVER
+        Rencana eksekusi akan dihasilkan oleh Query optimizer dengan bantuan statistik dan pohon prosesor Algebrizer \. Ini
+        adalah hasil dari Pengoptimal kueri dan memberi tahu cara melakukan \ melakukan pekerjaan \ persyaratan Anda.
+        Ada dua rencana eksekusi yang berbeda - Estimasi dan Aktual.
+        Estimasi rencana eksekusi menunjukkan tampilan pengoptimal.
+        <br>
+        Rencana eksekusi sebenarnya menunjukkan apa yang mengeksekusi kueri dan bagaimana hal itu dilakukan.
+        Rencana eksekusi disimpan dalam memori yang disebut cache rencana, sehingga dapat digunakan kembali. Setiap rencana
+        disimpan satu kali kecuali pengoptimal memutuskan paralelisme untuk eksekusi kueri.
+        Ada tiga format berbeda dari rencana eksekusi yang tersedia di SQL Server - Paket grafis, paket Teks, dan paket XML.
+        SHOWPLAN adalah izin yang diperlukan untuk pengguna yang ingin melihat rencana eksekusi.<p/>
+        CONTOH <br>
+        Berikut adalah prosedur untuk melihat perkiraan EXECUTION PLAN.
+        <br><br>
+        <h6>Langkah 1</h6>
+        <p> Hubungkan ke instance SQL Server. Dalam kasus ini, 'TESTINSTANCE' adalah nama instance seperti yang
+        ditunjukkan di snapshot berikut</p>
+        <img src="images/db5/2.webp" alt="">
+        <br><br>
+        <h5>Langkah 2</h5>
+        <p>Klik opsi Query Baru yang terlihat di layar di atas dan tulis kueri berikut. Sebelum menulis query, pilih
+        nama database. Dalam hal ini, 'TestDB' adalah nama database.
+        ​<br><br>
+        Select * from StudentTable
+        
+        <h5>Langkah 3</h5>​
+        Klik simbol yang disorot dalam kotak warna merah pada layar di atas dan kemudian jalankan query untuk
+        menampilkan rencana eksekusi aktual bersama dengan hasil query seperti yang ditunjukkan pada screenshoot berikut.</p>
+        <img src="images/db5/3.webp" alt="">
+        <br><br>
+        <h5>Langkah 4</h5>
+        <p>Letakkan mouse pada pemindaian tabel yang merupakan simbol kedua di atas kotak warna merah di layar untuk
+        menampilkan rencana eksekusi sebenarnya secara mendetail. Screenshoot berikut muncul.</p>
+        <img src="images/db5/4.webp" alt="">
+        <br><br>
+        <h5>Langkah 5</h5>
+        <p>Klik Hasil yang ada di sudut kiri atas layar di atas untuk mendapatkan layar berikut.</p>
+        <img src="images/db5/5.webp" alt="">
+        <br><br>
+        <h3>D. Oracle Evaluation Plan</h3>
+        <h5>Memahami Explain Plan</h5>
+        <p>
+        Pernyataan EXPLAIN PLAN menampilkan rencana eksekusi yang dipilih oleh pengoptimal Oracle untuk pernyataan SELECT,
+        UPDATE, INSERT, dan DELETE. Rencana eksekusi pernyataan adalah urutan operasi yang dilakukan Oracle untuk menjalankan
+        pernyataan tersebut.
+        <br><br>
+        Source tree baris adalah inti dari rencana eksekusi. Ini menunjukkan informasi berikut:
+        <br>
+        1. Urutan tabel yang direferensikan oleh pernyataan
+        <br>
+        2. Metode akses untuk setiap tabel yang disebutkan dalam pernyataan
+        <br>
+        3. Metode gabungan untuk tabel yang dipengaruhi oleh operasi gabungan dalam pernyataan
+        <br>
+        4. Operasi data seperti filter, pengurutan, atau agregasi
+        
+        ​<br><br>
+        
+        Selain source tree baris, tabel rencana berisi informasi tentang berikut ini:
+        <br>
+        1. Optimasi, seperti biaya dan kardinalitas setiap operasi
+        <br>
+        2. Partisi, seperti sekumpulan partisi yang diakses
+        <br>
+        3. Eksekusi paralel, seperti metode distribusi input gabungan
+        <br>
+        <br>​
+        Hasil EXPLAIN PLAN memungkinkan Anda menentukan apakah pengoptimal memilih rencana eksekusi tertentu, seperti, loop
+        bersarang yang digabungkan. Ini juga membantu Anda untuk memahami keputusan pengoptimal, seperti mengapa pengoptimal
+        memilih gabungan loop bersarang daripada gabungan hash, dan memungkinkan Anda memahami kinerja kueri.
+        
+        <h5>Tabel Output PLAN_TABLE</h5>
+        
+        PLAN_TABLE secara otomatis dibuat sebagai tabel sementara global untuk menampung output dari pernyataan EXPLAIN PLAN
+        untuk semua pengguna. PLAN_TABLE adalah tabel keluaran sampel default di mana pernyataan EXPLAIN PLAN menyisipkan baris
+        yang menjelaskan rencana eksekusi.
+        ​<br><br>
+        Meskipun tabel PLAN_TABLE secara otomatis disiapkan untuk setiap pengguna, Anda dapat menggunakan skrip SQL utlxplan.sql
+        untuk membuat PLAN_TABLE lokal secara manual di skema Anda. Nama dan lokasi pasti dari skrip ini bergantung pada sistem
+        operasi Anda. Di UNIX, ini terletak di direktori $ ORACLE_HOME / rdbms / admin.
+        ​<br><br>
+
+        <h5>Menjalankan EXPLAIN PLAN</h5>
+        Untuk menjelaskan pernyataan SQL, gunakan klausa EXPLAIN PLAN FOR tepat sebelum pernyataan. Sebagai contoh:
+        <br><br>
+        EXPLAIN PLAN FOR <br>
+        SELECT last_name FROM employees;
+        <br><br>
+        Ini menjelaskan rencana tersebut ke dalam tabel PLAN_TABLE. Anda kemudian dapat memilih rencana eksekusi dari
+        PLAN_TABLE.
+        
+        <h5>Menampilkan Output PLAN_TABLE</h5>
+        Setelah Anda menjelaskan rencananya, gunakan skrip SQL berikut atau paket PL / SQL yang disediakan oleh Oracle Database
+        untuk menampilkan output tabel rencana terbaru:
+        <br><br>
+        <strong>UTLXPLS.SQL</strong>
+        <br><br>
+        Skrip ini menampilkan output tabel rencana untuk pemrosesan serial. Contoh 11-2, "EXPLAIN PLAN Output" adalah contoh
+        output tabel rencana saat menggunakan skrip UTLXPLS.SQL.
+        <br><br>
+        <strong>UTLXPLP.SQL</strong>
+        <br><br>
+        Script ini menampilkan output tabel rencana termasuk kolom eksekusi paralel.
+        <br><br>
+        <strong>Fungsi tabel DBMS_XPLAN.DISPLAY</strong>
+        <br><br>
+        Fungsi ini menerima opsi untuk menampilkan output tabel rencana. Anda dapat menentukan:
+        <br>
+        1. Nama tabel rencana jika Anda menggunakan tabel yang berbeda dari PLAN_TABLE
+        <br>
+        2. ID pernyataan jika Anda telah menyetel ID pernyataan dengan EXPLAIN PLAN
+        <br>
+        3. Opsi format yang menentukan tingkat detail: BASIC, SERIAL, dan TYPICAL, ALL,
+        <br><br>
+        ​
+        Beberapa contoh penggunaan DBMS_XPLAN untuk menampilkan output PLAN_TABLE adalah:
+        <br><br>
+        SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());<br>
+        SELECT PLAN_TABLE_OUTPUT <br> 
+        FROM TABLE(DBMS_XPLAN.DISPLAY('MY_PLAN_TABLE', 'st1','TYPICAL')); <br>
+        
+        <h5>Membaca EXPLAIN PLAN Output</h5>
+        
+        Bagian ini menggunakan contoh EXPLAIN PLAN untuk mengilustrasikan rencana eksekusi. Pernyataan dalam Contoh 1 digunakan
+        untuk menampilkan rencana eksekusi.
+        <br><br>
+        Contoh 1 Pernyataan untuk menampilkan EXPLAIN PLAN
+        <br><br>
+        SELECT PLAN_TABLE_OUTPUT <br>
+        FROM TABLE(DBMS_XPLAN.DISPLAY(NULL, 'statement_id','BASIC'));
+        <br>
+        <img src="images/db5/6.webp" alt="">
+        <br><br>
+        <img src="images/db5/7.webp" alt="">
+    </p>
+    </div>
+
+    <section id="about">
+
+        <div class="row">
+
+            <div class="three columns">
+
+                <img class="profile-pic" src="images/profilepic.jpg" alt="" />
+
+            </div>
+
+            <div class="nine columns main-col">
+
+                <h2>About Me</h2>
+
+                <p>My name is Serwil Han Yon Pirade and I’m just starting third year of my computer science studies at
+                    Hasanuddin
+                    University in Gowa, Indonesia.
+                </p>
+
+                <div class="row">
+
+                    <div class="columns contact-details">
+
+                        <h2>Contact Details</h2>
+                        <p class="address">
+                            <span>Serwil Han Yon Pirade</span><br>
+                            <span>D121181517</span><br>
+                            <span>Jl. Malino, Borongloe, Bontomarannu, Gowa, <br>
+                                Sulawesi Selatan, 92119 IND
+                            </span><br>
+                            <span>ewinpirade@gmail.com</span>
+                        </p>
+
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div> <!-- end .main-col -->
+
+        </div>
+
+    </section> <!-- About Section End-->
+</body>
+
+</html>
