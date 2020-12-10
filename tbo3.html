@@ -59,6 +59,13 @@
             </div>
         </div>
 
+        <style>
+            .blog-content p,
+            .blog-content ol li {
+                font-size: 17px;
+                color: aliceblue;
+            }
+        </style>
 
 
     </header> <!-- Header End -->
@@ -142,19 +149,17 @@
         <ol>
             <li>
                 Buat Q = − closure({q0}) sebagai initial state dan F' = ⊘ menjadi himpunan final state. <br>
-                Buat Q' ={Q}. <br>
+                Buat Q' ={Q}.
                 Jika Q ∩ F = ⊘ kemudian tambahkan Q dalam F'.
             </li>
             <li>
                 Ulangi langkah tersebut sampai ε'(Qx, a) didefinisikan untuk
-                semua Qxε Q' dan semua a ε {0, 1}
+                semua Qxε Q' dan semua a ε {0, 1} <br><br>
+                &nbsp;&nbsp;&nbsp; a. Pilih Qx Q' dan a ε {0, 1} sedemikian hingga δ'(Qx, a) belum didefinisikan. <br>
+                &nbsp;&nbsp;&nbsp; b. Buat Qxa = δ(Qx, a) <br>
+                &nbsp;&nbsp;&nbsp; c. Jika Qxa ε Q' tambahkan Qxa ke Q' dan tambahkan juga pada F' jika Qxa ∩ F = ⊘
             </li>
         </ol>
-        </p>
-        <p>
-            a. Pilih Qx Q' dan a ε {0, 1} sedemikian hingga δ'(Qx, a) belum didefinisikan. <br>
-            b. Buat Qxa = δ(Qx, a) <br>
-            c. Jika Qxa ε Q' tambahkan Qxa ke Q' dan tambahkan juga pada F' jika Qxa ∩ F = ⊘
         </p>
         <p>
             Semua proses tersebut dapat dilihat pada tabel transisi
