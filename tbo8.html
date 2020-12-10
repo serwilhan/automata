@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>SERWIL HAN | PERSONAL WEB</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.page.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="icn.png">
+
+</head>
+
+<body>
+
+    <!-- Header
+    ================================================== -->
+    <header id="home">
+
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a class="smoothscroll" href="index.html" target="_blank">Home</a></li>
+            </ul> <!-- end #nav -->
+
+        </nav> <!-- end #nav-wrap -->
+
+        <div class="row banner">
+            <div class="banner-text">
+                <h1 class="responsive-headline" style="text-transform: uppercase;">Context Free Grammars</h1>
+            </div>
+        </div>
+
+        <style>
+            .blog-content p {
+                font-size: 17px;
+                color: aliceblue;
+            }
+        </style>
+
+
+
+    </header> <!-- Header End -->
+
+    <!-- ISI MATERI  -->
+
+    <!-- Post Content -->
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+
+        <!-- Post Content -->
+        <div class="post-content mt-0">
+            <H1 class="post-title mb-2">Context Free Grammars (CFG)</H1>
+
+            <div class="d-flex justify-content-between mb-30">
+                <div class="post-meta d-flex align-items-center">
+                    <a href="#" class="post-author">By Serwil Han Yon Pirade</a>
+                    <i class="fa fa-circle" aria-hidden="true"></i>
+                    <a href="#" class="post-date">D121181517</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 1 -->
+
+        <h3>
+            Definisi Context Free Grammars
+        </h3>
+        <p>
+            Context Free Grammars(CFG) adalah tata bahasa yang memenuhi properti tertentu. Dalam ilmu komputer, tata
+            bahasa menjelaskan bahasa. Khususnya, CFG menggambarkan bahasa formal.
+        </p>
+        <p>
+            Bahasa formal hanyalah satu set(istilah matematika untuk kumpulan objek) string(urutan simbol ... sangat
+            mirip dengan penggunaan kata "string" pada pemrograman). Contoh sederhana dari bahasa formal adalah himpunan
+            semua string biner dengan panjang 3 bit, {000, 001, 010, 011, 100, 101, 110, 111}.
+        </p>
+        <p>
+            Grammars bekerja dengan menentukan transformasi yang dapat Kamu buat untuk membuat string dalam bahasa
+            yang dijelaskan oleh grammar. Grammars akan menjelaskan bagaimana mengubah simbol awal (biasanya S)
+            menjadi beberapa string simbol. Grammar untuk bahasa yang diberikan sebelumnya adalah:
+        </p>
+        <img src="images/tbo8/1.png" alt="" width="200px" style="display:block;margin: 0 auto 15px;">
+        <p>
+            Maksud dari grammar diatas adalah, bahwa S dapat diganti dengan BBB, dan B dapat diganti dengan 0,
+            dan B dapat diganti dengan 1. Jadi untuk menyusun string 010 kita dapat melakukan S -> BBB -> 0BB -> 01B ->
+            010.
+        </p>
+        <p>
+            Context Free Grammars hanyalah grammar di mana hal yang Anda ganti (bagian kiri panah) adalah simbol
+            "non-terminal" tunggal. Simbol non-terminal adalah simbol apa pun yang Kamu gunakan dalam grammar yang
+            tidak dapat muncul di string akhir Anda. Dalam grammar di atas, "S" dan "B" adalah simbol non-terminal,
+            dan "0" dan "1" adalah simbol "terminal".
+        </p>
+        <img src="images/tbo8/2.png" alt="" width="300px" style="display:block;margin: 0 auto 15px;">
+        <p>
+            Grammar diatas bukanlah context free karena mengandung aturan seperti AB -> 1 yang memiliki lebih dari satu
+            simbol
+            non-terminal di sebelah kiri.
+        </p>
+        <h3>Pemanfaatan Context Free Grammar</h3>
+        <h4>Parsing</h4>
+        <p>
+            Context Free Grammar ( CFG ) menjadi dasar dalam pembentukan suatu parser/proses analisis sintaksis. Bagian
+            sintaks dalam suatu kompilator kebanyakan di definisikan dalam tata bahasa bebas konteks. Pohon penurunan (
+            derivation tree/parse tree) berguna untuk menggambarkan simbol-simbol variabel menjadi simbol-simbol
+            terminal setiap simbol variabel akan di turunkan menjadi terminal sampai tidak ada yang belum tergantikan.
+        </p>
+        <p>Contoh diberikan sebuah CFG seperti dibawah ini.</p>
+        <img src="images/tbo8/3.png" alt="" width="300px" style="display:block;margin: 0 auto 15px;">
+        <p>
+            Penyelesaian :
+        </p>
+        <p>
+            Pada CFG tersebut kita dapat melihat aturan produksi S hanya ada 1 yaitu S dapat diderivasi menjadi aBa.
+            Disisi lain aturan produksi B memiliki 2 pilihan aturan yaitu B dapat diderivasi menjadi bB atau empty
+            string (epsilon). Seperti yang kita ketahui bahwa CFG memiliki symbol terminal dan non-terminal (variable).
+            Simbol non-terminal pada grammar tersebut adalah S dan B, sedangkan symbol terminal adalah a, b dan juga ada
+            empty production. Ketika proses parsing mencapai symbol terminal maka derivasi tidak dapat dilakukan lagi
+            untuk terminal tersebut.
+        </p>
+        <p>
+            Jika terdapat sebuah input string abba dan kita ingin melakukan pengecekan apakah input tersebut sudah
+            sesuai dengan aturan produksi yang kita miliki, maka kita dapat mencoba untuk membuat parse tree. Contoh
+            parse tree yang dapat terbentuk dari CFG diatas adalah seperti gambar dibawah ini.
+        </p>
+        <img src="images/tbo8/4.jpg" alt="" width="300px" style="display:block;margin: 0 auto 15px;">
+        <p style="margin-top: 25px;">
+            Kita akan memulai membuat syntax tree dari Start symbol. Pada umumnya start symbol akan diletakkan dipaling
+            atas dari sebuah CFG. Pada contoh diatas start symbol kita adalah S yang akan diderivasi menjadi aBa (karena
+            hanya ada 1 aturan jadi kita tidak bisa memilih aturan lainnya). Kita akan melakukan derivasi menggunakan
+            left-most derivation. Karena node paling kiri merupakan node terimal symbol yang tidak dapat diderivasi maka
+            kita akan melanjutkan dengan node berikutnya yaitu B. B dapat diderivasi menjadi bB atau ɛ. Jika kita
+            memilih aturan ke 2 (derivasi menjadi ɛ) maka input string yang akan diterima adalah aa, bukan abba. Oleh
+            karena itu kita harus memilih aturan yang pertama yaitu B diderivasi menjadi bB. Proses terus dilakukan
+            sampai mendapatkan hasil terminal symbol yang sama dengan input string. Jika sebuah input string tidak dapat
+            dibentuk syntax tree nya maka berarti string tersebut tidak sesuai dengan grammar yang ada (syntax error).
+        </p>
+
+    </div>
+
+    <section id="about">
+
+        <div class="row">
+
+            <div class="three columns">
+
+                <img class="profile-pic" src="images/profilepic.jpg" alt="" />
+
+            </div>
+
+            <div class="nine columns main-col">
+
+                <h2>About Me</h2>
+
+                <p>
+                    My name is Serwil Han Yon Pirade and I’m just starting third year of my computer science studies at
+                    Hasanuddin University in Gowa, Indonesia.
+                </p>
+
+                <div class="row">
+
+                    <div class="columns contact-details">
+
+                        <h2>Contact Details</h2>
+                        <p class="address">
+                            <span>Serwil Han Yon Pirade</span><br>
+                            <span>D121181517</span><br>
+                            <span>Jl. Malino, Borongloe, Bontomarannu, Gowa, <br>
+                                Sulawesi Selatan, 92119 IND
+                            </span><br>
+                            <span>ewinpirade@gmail.com</span>
+                        </p>
+
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div> <!-- end .main-col -->
+
+        </div>
+
+    </section> <!-- About Section End-->
+</body>
+
+</html>
