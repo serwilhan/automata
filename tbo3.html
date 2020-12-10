@@ -55,7 +55,7 @@
 
         <div class="row banner">
             <div class="banner-text">
-                <h1 class="responsive-headline">PEMANFAATAN <br> DFA & NFA</h1>
+                <h1 class="responsive-headline">TRANSFORMASI <br> NFA - DFA</h1>
             </div>
         </div>
 
@@ -72,7 +72,7 @@
 
         <!-- Post Content -->
         <div class="post-content mt-0">
-            <H1 class="post-title mb-2">PEMANFAATAN DFA & NFA</H1>
+            <H1 class="post-title mb-2">TRANSFORMASI NFA MENJADI DFA</H1>
 
             <div class="d-flex justify-content-between mb-30">
                 <div class="post-meta d-flex align-items-center">
@@ -101,117 +101,74 @@
             Deterministic Finite Automata (NFA).
         </p>
 
-        <h3>Deterministik Finite Automata</h3>
+        <h3>Transformasi NFA - DFA (Subset Construction)</h3>
 
         <p>
-            Pada DFA dari suatu state ada tepat satu state berikutnya untuk setiap simbol input
-            (masukan) yang di terima.
-        </p>
-
-        <p>Contoh :</p>
-
-        <img src="images/tbo3/dfa1.png" alt="">
-
-        <p>
-            Konfigurasi DFA contoh 1 secara formal adalah sebagai berikut :
+            Walaupun lebih mudah untuk dibangun, suatu NFA hanyalah mesin ideal yang tidak dapat dengan efisien
+            diimplementasikan dalam kehidupan nyata karena mesin yang sesungguhnya hanya dapat mengikuti satu jalur
+            komputasi pada saat yang bersamaan (Du dan Ko, 2001). Untuk itu diperlukan suatu prosedur yang dapat
+            melakukan transformasi dari suatu NFA menjadi DFA yang ekuivalen dengan bahasa yang diterima NFA tersebut.
+            Transformasi suatu NFA menjadi DFA dilakukan dengan melakukan simulasi semua jalur transisi yang mungkin
+            pada NFA.
         </p>
         <p>
-            Q = {q0, q1, q2}<br>
-            Σ = {a, b}<br>
-            S = q0<br>
-            F = {q2}
-        </p>
-
-        <p>
-            Fungsi-fungsi transisinya sebagai berikut :<br>
+            Suatu NFA memiliki n buah state maka DFA yang ekuivalen dengan NFA tersebut akan memiliki 2n state dengan
+            state awal pada DFA tersebut merupakan subset {q0} dengan demikian, transformasi dari NFA menjadi DFA
+            meliputi pencarian semua subset yang mungkin dari himpunan state dari NFA. (Kakde, 2002).
         </p>
         <p>
-            δ (q0, a) = q0, δ (q0, b) = q1,<br>
-            δ (q1, a) = q1, δ (q1, b) = q2,<br>
-            δ (q2, a) = q1, δ (q2, b) = q2.
+            Ide dasar dari subset construction adalah bahwa masing-masing state pada DFA yang terbentuk berkorespondensi
+            dengan himpunan state pada NFA. Terdapat kemungkinan bahwa jumlah state pada DFA yang terbentuk dari hasil
+            subset construction adalah berjumlah eksponensial dari jumlah state dari NFA.
         </p>
-
         <p>
-            Jika disajikan dalam tabel transisi :
+            Contoh : <br>
+            Diketahui suatu NFA M = (Q, {0,1}, δ, q0, F) dan diberikan Q = {q0, q1, q2, q3, q4, q5}, F = {q3, q4} dan
+            tabel
+            transisi
         </p>
-        <img src="images/tbo3/dfa2.png" alt="">
-
-        <p>* Dalam DFA, selalu dan pasti terdapat satu state berikutnya untuk setiap pasangan state input</p>
-
-        <!-- SECTION 2 -->
-        <h3>Non-Deterministik Finite Automata</h3>
+        <img src="images/tbo3/tbo31.png" alt=""> <br><br>
         <p>
-            Pada NFA dari suatu state bisa terdapat nol (0), satu (1), atau lebih busur keluar
-            (transisis) berlabel simbol yang sama. Jadi setiap pasangna state-input, kita bisa memiliki
-            0 atau lebih pilihan untuk state berikutnya.
+            Lihat Gambar dibawah (3 NFA Masukan Subset Construction) untuk mengetahui digram transisi NFA. akan dibentuk
+            DFA M′yang ekuivalen dengan NFA M.
         </p>
-        <p>Contoh :</p>
-        <img src="images/tbo3/nfa1.png" alt="">
-        <p>
-            Pada NFA contoh 2 diatas terdapat dua busur keluar berlabel input ‘a’. Dari state q0 bila
-            mendapat input ‘a’ bisa berpindah ke state q0 atau q1 yang secara formal dinyatakan : δ <br><br>
-            (q0, a) = {q0, q1}
-        </p>
-
-        <p>
-            Konfigurasi NFA contoh 2 secara formal adalah sebagai berikut : <br>
-            Σ = {a, b}<br>
-            S = q0<br>
-            F = {q1}
-        </p>
-
-        <p>Tabel transisinya : </p>
-        <img src="images/tbo3/nfa2.png" alt="">
-        <br><br>
-        <p>Kita mulai dengan state {q0} :</p>
-        <img src="images/tbo3/nfa3.png" alt="">
+        <img src="images/tbo3/tbo32.png" alt="">
         <br><br>
         <p>
-            Telusuri state berikutnya : <br>
-            • δ (q0, 0) = {q0, q1 } <br>
-            • δ (q0, 1) = {q1}
+            Solusi : <br>
+            dapat dibentuk DFA M' dengan cara :
         </p>
+        <p>
+        <ol>
+            <li>
+                Buat Q = − closure({q0}) sebagai initial state dan F' = ⊘ menjadi himpunan final state. <br>
+                Buat Q' ={Q}. <br>
+                Jika Q ∩ F = ⊘ kemudian tambahkan Q dalam F'.
+            </li>
+            <li>
+                Ulangi langkah tersebut sampai ε'(Qx, a) didefinisikan untuk
+                semua Qxε Q' dan semua a ε {0, 1}
+            </li>
+        </ol>
+        </p>
+        <p>
+            a. Pilih Qx Q' dan a ε {0, 1} sedemikian hingga δ'(Qx, a) belum didefinisikan. <br>
+            b. Buat Qxa = δ(Qx, a) <br>
+            c. Jika Qxa ε Q' tambahkan Qxa ke Q' dan tambahkan juga pada F' jika Qxa ∩ F = ⊘
+        </p>
+        <p>
+            Semua proses tersebut dapat dilihat pada tabel transisi
+        </p>
+        <img src="images/tbo3/tbo33.png" alt=""> <br> <br>
+        <p>
+            Perlu dicatat bahwa pada langkah 2 tidak perlu mempertimbangkan states Q00, Q000, Q001 dan
+            yang lainnya karena Q00 = Q0, Q000 = Q00 = Q0 dan Q001 = Q01, dengan cara yang hampir sama dapat
+            diperoleh Q11 = Q1 tidak perlu memperhitungkan Q11W untuk sebarang W ϵ {0, 1}*.
+            Transisi diagram dari DFA M ′ ditunjukkan pada Gambar dibawah (DFA Hasil Subset Construction yang
+            Ekuivalen).
+        </p>
+        <img src="images/tbo3/tbo34.png" alt=""> <br> <br>
 
-        <p>Hasilnya : </p>
-        <img src="images/tbo3/nfa4.png" alt="">
-        <br><br>
-        <p>
-            Selanjutnya telusuri untuk setiap state baru yang terbentuk : <br>
-            • δ (q1, 0) = Ø <br>
-            • δ (q1, 1) = {q0, q1} <br>
-        </p>
-
-        <p>
-            • "δ ({q0,q1}, 0) = {q0, q1}" adalah hasil gabungan dari "δ (q0, 0) = {q0, q1}dengan δ (q1, 0) = Ø"
-        </p>
-        <p>
-            • "δ ({q0,q1}, 1) = {q0, q1}" adalah hasil gabungan dari "δ (q0, 1) = {q1}dengan δ (q1, 0) = {q0, q1}"
-        </p>
-        <p>
-            Hasilnya :
-        </p>
-        <img src="images/tbo3/nfa5.png" alt="">
-        <br><br>
-        <p>
-            Selanjutnya telusuri state baru yang terbentuk : <br>
-            • δ (Ø, 0) = Ø <br>
-            • δ (Ø, 0) = Ø
-        </p>
-
-        <p>
-            Hasilnya :
-        </p>
-        <img src="images/tbo3/nfa6.png" alt="">
-        <br><br>
-        <p>
-            Selanjutnya kita ingat bahwa F = {q1} maka himpunan state akhir (F) sekarang
-            adalah semua yang mengandung state q1.
-        </p>
-        <p>F = {{q1}, {q0, q1}}</p>
-        <p>
-            Hasilnya :
-        </p>
-        <img src="images/tbo3/nfa7.png" alt="">
     </div>
 
     <section id="about">
